@@ -50,18 +50,7 @@ class Funciones1():
             print ("No se encontró el elemento" + xpath)
             return t
 
-    def EventoValidar(self,xpath,Tiempo):
-        try:
-            val = WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.XPATH, xpath)))
-            val = self.driver.find_element(by=By.XPATH, value=(xpath))
-            val.click()
-            t = time.sleep(Tiempo)
-            return t
-
-        except TimeoutException as ex:
-            print(ex.msg)
-            print ("No se encontró el elemento" + xpath)
-            return t
+   
 
 
 
